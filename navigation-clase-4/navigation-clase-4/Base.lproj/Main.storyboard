@@ -16,11 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y38-tx-FJT">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y38-tx-FJT">
                                 <rect key="frame" x="8" y="409" width="377" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your name?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJp-bj-q5q">
+                                <rect key="frame" x="88.666666666666671" y="361.66666666666669" width="215.66666666666663" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="systemGray5Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prl-mX-gT9">
+                                <rect key="frame" x="172.66666666666666" y="463" width="48" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OK">
+                                    <color key="baseBackgroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="teV-tG-H0Q" kind="show" id="qn1-PC-8id"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
@@ -28,15 +44,65 @@
                             <constraint firstItem="Y38-tx-FJT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7f9-OV-UWe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y38-tx-FJT" secondAttribute="trailing" constant="8" id="HSN-g0-7L6"/>
                             <constraint firstItem="Y38-tx-FJT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RRQ-k0-ZH5"/>
+                            <constraint firstItem="Prl-mX-gT9" firstAttribute="top" secondItem="Y38-tx-FJT" secondAttribute="bottom" constant="20" id="a8P-rP-br4"/>
+                            <constraint firstItem="Prl-mX-gT9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bC2-hs-nMh"/>
+                            <constraint firstItem="yJp-bj-q5q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iif-Yw-nOg"/>
+                            <constraint firstItem="Y38-tx-FJT" firstAttribute="top" secondItem="yJp-bj-q5q" secondAttribute="bottom" constant="16" id="jyB-eC-e7b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Y38-tx-FJT" id="zUx-Jr-9i1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="67.938931297709928" y="-27.464788732394368"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="y2Y-SU-5CR">
+            <objects>
+                <viewController id="teV-tG-H0Q" customClass="SecondViewController" customModule="navigation_clase_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dXk-aG-QYt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1j-Sb-c2z">
+                                <rect key="frame" x="170.66666666666666" y="405.33333333333331" width="52" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vEu-8n-Xf8"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="C1j-Sb-c2z" firstAttribute="centerX" secondItem="dXk-aG-QYt" secondAttribute="centerX" id="AMc-et-ZP5"/>
+                            <constraint firstItem="C1j-Sb-c2z" firstAttribute="centerY" secondItem="dXk-aG-QYt" secondAttribute="centerY" id="WjA-M4-syN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3eq-4D-gnx"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="C1j-Sb-c2z" id="xy7-jA-GYk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6I-L9-OoZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="-27"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
