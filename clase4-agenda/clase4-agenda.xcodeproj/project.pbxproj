@@ -13,6 +13,7 @@
 		0FC895FF2ABD321B00C398B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC895FE2ABD321B00C398B8 /* Assets.xcassets */; };
 		0FC896022ABD321B00C398B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC896002ABD321B00C398B8 /* LaunchScreen.storyboard */; };
 		0FC8960C2ABD386D00C398B8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8960B2ABD386D00C398B8 /* TableViewController.swift */; };
+		0FE2841E2ACAFF3D00A0D5B6 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE2841D2ACAFF3D00A0D5B6 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0FC896012ABD321B00C398B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC896032ABD321B00C398B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FC8960B2ABD386D00C398B8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0FE2841D2ACAFF3D00A0D5B6 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0FC896002ABD321B00C398B8 /* LaunchScreen.storyboard */,
 				0FC896032ABD321B00C398B8 /* Info.plist */,
 				0FC8960B2ABD386D00C398B8 /* TableViewController.swift */,
+				0FE2841D2ACAFF3D00A0D5B6 /* ContactViewController.swift */,
 			);
 			path = "clase4-agenda";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC895F62ABD321900C398B8 /* AppDelegate.swift in Sources */,
+				0FE2841E2ACAFF3D00A0D5B6 /* ContactViewController.swift in Sources */,
 				0FC8960C2ABD386D00C398B8 /* TableViewController.swift in Sources */,
 				0FC895F82ABD321900C398B8 /* SceneDelegate.swift in Sources */,
 			);

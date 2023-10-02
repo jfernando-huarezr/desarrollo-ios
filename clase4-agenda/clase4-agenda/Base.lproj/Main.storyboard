@@ -24,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="X2B-sa-VXx" kind="show" id="biP-hB-IZD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="811.45038167938924" y="-107.04225352112677"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact View Controller-->
         <scene sceneID="HKd-h7-b1b">
             <objects>
-                <viewController id="uf8-5V-GEX" sceneMemberID="viewController">
+                <viewController id="uf8-5V-GEX" customClass="ContactViewController" customModule="clase4_agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="an1-59-GUq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,9 +71,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mh1-68-Le2">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mKR-cS-6eD"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="6Dv-So-KEf"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mKR-cS-6eD">
+                            <connections>
+                                <action selector="close:" destination="uf8-5V-GEX" id="27q-er-SPi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="6Dv-So-KEf">
+                            <connections>
+                                <action selector="save:" destination="uf8-5V-GEX" id="qvr-ya-85d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameText" destination="ZhK-yQ-gcI" id="Toa-Ig-qXs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGf-Bi-j7W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +128,9 @@
             <point key="canvasLocation" x="1580.9160305343512" y="-107.04225352112677"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="585-TJ-r4W"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

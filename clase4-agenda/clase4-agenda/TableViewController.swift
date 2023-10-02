@@ -7,9 +7,25 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, ContactViewDelegate {
+    func close() {
+        dismiss(animated: true)
+    }
     
-    let names = ["Juan", "Marcos", "Lucas", "Mateo"]
+    func save(name: String) {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            names.append(name)
+            self.tableView.reloadData()
+            return
+        }
+        
+        names[indexPath.row] = name
+        self.tableView.reloadData()
+
+    }
+    
+    
+    var names = ["Juan", "Marcos", "Lucas", "Mateo"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,17 +71,18 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
+    
+    //cuando haces el swipe, para borrar
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            names.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -82,14 +99,36 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    //secuencia
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let destination = segue.destination as? UINavigationController else {
+            return
+        } //verifica que la secuencia que he activado me lleve a un Navigation Controller
+                
+        
+        //topViewController es el viewController ve primero al principio de la navegacion. En este caso el primero que ve es ContactViewController
+        guard let viewController = destination.topViewController as? ContactViewController else {
+            return
+        }
+        
+        viewController.delegate = self
+        
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let name = names[indexPath.row]
+        
+        viewController.name = name
+        
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

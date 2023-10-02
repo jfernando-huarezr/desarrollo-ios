@@ -25,6 +25,7 @@ class SecondViewController: UIViewController {
         nameLabel.text = name
     }
     
+    
 
     /*
     // MARK: - Navigation
